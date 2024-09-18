@@ -1,0 +1,42 @@
+<div class="acceuil">
+    <div class="rechercher row">
+            <form name="f1" class="col-6">
+                <input type="text" [(ngModel)]="nom" placeholder="Recherecher..." name="nom"   (keyup)="rechercher_nom()" >
+            </form>
+            <form name="f2"  class="col-4">
+                <select id="titre" name="spe" [(ngModel)]="spe"  (change)="rechercher_spe()">
+                    <option value="0" disabled>Choix titre du profile</option>
+                    <option *ngFor="let s of specialite" [value]="s.id">{{s.titre}}</option>
+                </select>
+            </form>
+        
+        <button [disabled]="!search" class="btn col-2" (click)="voir_tous()">Voire tous</button> 
+        
+    </div>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <th>nom</th>
+                <th>prenom</th>
+                <th>titre du profile</th>
+                <th>mail</th>
+                <th>telephone</th>
+                <th>voir cv</th>
+                <th *ngIf="authserve.testerAdmin()">modefier</th>
+                <th *ngIf="authserve.testerAdmin()">suppremer</th>
+            </thead>
+            <tbody *ngFor="let cv of CVs">
+                <tr >
+                    <td>{{cv.info.nom  | uppercase}}</td>
+                    <td>{{cv.info.pre}}</td>
+                    <td>{{cv.info.spe.titre}}</td>
+                    <td>{{cv.info.mail}}</td>
+                    <td>{{cv.info.tele}}</td>
+                    <td><a [routerLink]="['/view-cv',cv.id]" class="voir btn">voir cv</a></td>
+                    <td *ngIf="authserve.testerAdmin()"><a [routerLink]="['/update-cv',cv.id]"><i class="bi bi-pencil-square mod btn"></i></a></td>
+                    <td *ngIf="authserve.testerAdmin()"><i (click)="suppremer(cv.id)" class="bi bi-trash3-fill  sup btn"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

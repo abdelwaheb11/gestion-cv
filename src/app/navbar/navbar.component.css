@@ -1,0 +1,15 @@
+nav{
+    display: flex;
+    align-items: center;
+    background:linear-gradient(#fff,rgb(206, 206, 206));
+    justify-content: space-between;
+    width: 100vw;
+    height: 8vh;
+}
+nav .titre a{
+    margin-left: 20px;
+    font-weight: 900;
+    font-size: larger;
+    letter-spacing: 2px;
+    color: #004;
+}

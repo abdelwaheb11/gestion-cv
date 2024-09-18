@@ -1,0 +1,13 @@
+[{
+    "nom": "abdelwaheb",
+    "mail": "abdelwaheb@gmail.com",
+    "mot": "123",
+    "role": "AGENT"
+  },
+  {
+    "nom": "Administrateur",
+    "mail": "admin@gmail.com",
+    "mot": "azerty",
+    "role": "ADMIN"
+  }
+]

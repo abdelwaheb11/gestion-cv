@@ -1,0 +1,25 @@
+.login{
+    width: 35%;
+    height: auto;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 0 0 20px #002;
+   border-radius: 10px;
+}
+h1{
+    text-align: center;
+    color: #004;
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.erre{
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: medium;
+    font-weight: 600;
+}

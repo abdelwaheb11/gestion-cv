@@ -1,0 +1,22 @@
+<nav *ngIf="authserve.getconn() || http.getconn()">
+    <div class="titre">
+        <a routerLink="/">Gestion des CV</a>
+    </div>
+    <div class="d-flex align-items-center gap-3">
+        <span class=" fw-bold">{{user}} ({{role}})</span>
+        <div class="dropdown-center ">
+            <button class="btn btn-secondary dropdown-toggle me-4 rounded-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="fs-5 fw-bold">{{user[0]}}</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li class="dropdown-item">{{user}} ({{role}})</li>
+                <li><hr class="dropdown-divider"></li>
+                <li *ngIf="authserve.testerAdmin() || http.testerAdmin()" ><a class="dropdown-item" routerLink="add-cv">Ajouter cv</a></li>
+                <li><a class="dropdown-item" routerLink="acceuil">Liste CV</a></li>
+                <li><a class="dropdown-item" routerLink="search-profile">Rechercher profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a (click)="deconncter()" class="dropdown-item" href="#">Deconnecte</a></li>
+            </ul>
+          </div>
+    </div>
+</nav>

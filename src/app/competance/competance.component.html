@@ -1,0 +1,22 @@
+<div *ngFor="let l of comps">
+    <div class="contenu">
+        <div class="nom">
+            {{l.labelle}}
+            <div class="probar">
+                <div class="nvbar" [style.width.%]="(l.niveau) * 10">.</div>
+            </div>
+        </div>
+        <div>
+            <button class="edit" (click)="edit_comp(l.id)">Edit</button>
+            <button class="edit" (click)="supp_comp(l.id)">Suppremer</button>
+        </div>
+    </div>
+</div>
+
+<form name="f5">
+    <label for="comp">Compétence</label>
+    <input type="text" name="comp" id="comp" [(ngModel)]="comp.labelle"><br>
+    <label for="nv">Niveau sur 10</label>
+    <input type="number" name="nv" id="nv" [(ngModel)]="comp.niveau"><br>
+    <input type="button" value="Ajouter" (click)="ajouter_comp()">
+</form>

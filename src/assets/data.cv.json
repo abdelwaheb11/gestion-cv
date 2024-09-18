@@ -1,0 +1,81 @@
+[
+    {
+      "id": 1,
+      "info": {
+        "nom": "Nom1",
+        "pre": "Prenom1",
+        "spe": "Specialite1",
+        "mail": "email1@example.com",
+        "adr": "Adresse1",
+        "tele": "123-456-7890",
+        "desc": "Description1"
+      },
+      "langues": [
+        { "labelle": "Langue1", "niveau": 3 },
+        { "labelle": "Langue2", "niveau": 4 }
+      ],
+      "formations": [
+        { "titre": "Formation1", "eta": "Etablissement1", "date_d": "01/2010", "date_f": "12/2012" }
+      ],
+      "experiences": [
+        { "post": "Poste1", "eta": "Entreprise1", "date_d": "01/2013", "date_f": "12/2015", "desc": "Description1" }
+      ],
+      "competances": [
+        { "labelle": "Compétence1", "niveau": 5 },
+        { "labelle": "Compétence2", "niveau": 4 }
+      ]
+    },
+    {
+      "id": 2,
+      "info": {
+        "nom": "Nom2",
+        "pre": "Prenom2",
+        "spe": "Specialite2",
+        "mail": "email2@example.com",
+        "adr": "Adresse2",
+        "tele": "987-654-3210",
+        "desc": "Description2"
+      },
+      "langues": [
+        { "labelle": "Langue1", "niveau": 5 },
+        { "labelle": "Langue3", "niveau": 3 }
+      ],
+      "formations": [
+        { "titre": "Formation2", "eta": "Etablissement2", "date_d": "01/2012", "date_f": "12/2014" }
+      ],
+      "experiences": [
+        { "post": "Poste2", "eta": "Entreprise2", "date_d": "01/2015", "date_f": "12/2017", "desc": "Description2" }
+      ],
+      "competances": [
+        { "labelle": "Compétence3", "niveau": 4 },
+        { "labelle": "Compétence4", "niveau": 3 }
+      ]
+    }, 
+    {
+        "id": 3,
+        "info": {
+          "nom": "Nom3",
+          "pre": "Prenom3",
+          "spe": "Specialite3",
+          "mail": "email1@example.com",
+          "adr": "Adresse3",
+          "tele": "123-456-7890",
+          "desc": "Description3"
+        },
+        "langues": [
+          { "labelle": "Langue1", "niveau": 5 },
+          { "labelle": "Langue2", "niveau": 8 }
+        ],
+        "formations": [
+          { "titre": "Formation1", "eta": "Etablissement1", "date_d": "01/2010", "date_f": "12/2012" }
+        ],
+        "experiences": [
+          { "post": "Poste1", "eta": "Entreprise1", "date_d": "01/2013", "date_f": "12/2015", "desc": "Description1" }
+        ],
+        "competances": [
+          { "labelle": "Compétence1", "niveau": 5 },
+          { "labelle": "Compétence2", "niveau": 4 }
+        ]
+    }
+]
+  

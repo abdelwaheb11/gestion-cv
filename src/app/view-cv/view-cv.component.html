@@ -1,0 +1,74 @@
+<div class="view-cv">
+<div class="hedher">
+    <div class="img">photo</div>
+    <div class="info">
+        <h1> {{cv.info.nom}} {{cv.info.pre}} </h1>
+        <ul>
+            <li> {{cv.info.mail}} </li>
+            <li> {{cv.info.tele}} </li>
+            <li> {{cv.info.adr}} </li>
+        </ul>
+    </div>
+</div>
+<div class="cv">
+    <div class="sidebar">
+        <div class="competance">
+            <div class="titer">
+                Competances
+            </div>
+            <div class="contenu-side-bar" *ngFor="let c of cv.competances">
+                <span>{{c.labelle}}</span>
+                <div class="probar">
+                    <div class="nvbar" [style.width.%]="(c.niveau) * 10">.</div>
+                </div>
+            </div>
+        </div>
+        <div class="lague" style="margin-top: 50px;">
+            <div class="titer">
+                langues
+            </div>
+            <div class="contenu-side-bar" *ngFor="let c of cv.langues">
+                <span>{{c.labelle}}</span>
+                <div class="probar">
+                    <div class="nvbar" [style.width.%]="(c.niveau) * 10">.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contenu-cv">
+        <div class="desc">
+            <div class="titer">Profile</div>
+            {{cv.info.desc}}
+        </div>
+        <div class="formation">
+            <div class="titer">
+                Formation
+            </div>
+            <div class="contenu" *ngFor="let f of cv.formations">
+                <span class="titre-f"> {{f.titre}} </span> <br>
+                <span class="etab"> {{f.eta}} </span>
+                <div class="date">
+                    <span> {{f.date_d}} </span>
+                    <span> {{f.date_f}} </span>
+                </div>
+            </div>
+        </div>
+        <div class="experiences">
+            <div class="titer">
+                experiences professionelles
+            </div>
+            <div class="contenu" *ngFor="let f of cv.experiences">
+                <span class="titre-f"> {{f.post}} </span> <br>
+                <span class="etab"> {{f.eta}} </span>
+                <div class="date">
+                    <span> {{f.date_d}} </span>
+                    <span> {{f.date_f}} </span>
+                </div>
+                <span class="desc">
+                    {{f.desc}}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
+form{
+    padding: 30px 50px;
+    display:grid;    
+}
+input[type=text],textarea,input[type=number],input[type="password"]{
+    padding: 7px 10px ;
+    color: #004;
+    font-size: 20px;
+    background-color: rgb(243, 243, 243);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+input[type=text]:focus,textarea:focus,input[type=number]:focus,input[type="password"]:focus{
+    transform: scale(1.04);
+    background-color: rgb(217, 217, 217);
+    border: 1px solid #004;
+
+}
+label{
+    color: #004;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 5px;
+    margin-bottom: 3px;
+}
+input[type=button]{
+    padding: 7px 0;
+    font-size: larger;
+    font-weight: 700;
+    color: #004;
+    border:2px solid #004;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+input[type=button]:hover{
+    background-color: #004;
+    color: #fff;
+}

@@ -1,0 +1,101 @@
+.acceuil{
+    width: 90vw;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 0 0 20px #001;
+    padding: 50px;
+    border-radius: 10px;
+    
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+thead {
+    background:linear-gradient(rgb(202, 229, 244),rgb(225, 239, 251));
+}
+  
+  th, td {
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    font-weight: bold;
+    color: #004;
+    text-transform: uppercase;
+  }
+  tbody tr{transition: 0.5s;}
+  
+  tbody tr:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+    border: none;
+    box-shadow: 0 0 15px #001;
+}
+
+.rechercher {
+  width: 100%;
+  margin: 5px auto;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+input[type="text"]{
+  width: 100%;
+  transform: scale(1);
+  font-size: medium;
+  font-weight: 600;
+}
+
+select,option{
+  height: 30px;
+  border: 2px solid #004;
+  border-radius: 5px;
+  color: #004;
+  background-color: rgb(243, 243, 243);
+  font-weight: 600;
+  margin:0 25px;
+}
+form{
+  padding: 0;
+}
+.btn{
+  font-weight: 600;
+  border: 2px solid #004;
+  padding: 5px 20px;
+  border-radius: 10px;
+  color: #004;
+  transition: 0.5s;
+}
+.btn:hover{
+  background-color: #004;
+  color: #fff;
+}
+.sup{
+  border: 2px solid rgb(205, 0, 0);
+  color: rgb(205, 0, 0);
+  cursor: pointer;
+}
+.sup:hover{
+  background-color: rgb(205, 0, 0);
+}
+.mod{
+  border: 2px solid rgb(226, 226, 2);
+  color: rgb(226, 226, 2);
+}
+.mod:hover{
+  background-color: rgb(226, 226, 2);
+}
+.voir{
+  border: 2px solid rgb(2, 107, 255);
+  color: rgb(2, 107, 255);
+}
+.voir:hover{
+  background-color: rgb(2, 107, 255);
+}

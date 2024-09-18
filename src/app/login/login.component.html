@@ -1,0 +1,12 @@
+
+<div class="login">
+    <h1>Login</h1>
+    <form name="f">
+        <input (change)="reset()" name="m" type="text"  [(ngModel)]="user.mail" placeholder="mail"> <br>
+        <input (change)="reset()" name="p" type="password"  [(ngModel)]="user.mot" placeholder="password"> <br>
+        <div  class="erre" *ngIf="erreur">
+            <p> Mail ou mot de passe est incorrect</p>
+        </div>
+        <input type="button" value="Login" (click)="connected()">
+    </form>
+</div>

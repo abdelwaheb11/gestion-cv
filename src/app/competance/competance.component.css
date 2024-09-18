@@ -1,0 +1,53 @@
+.probar{
+    width: 250px;
+    height: 15px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.nvbar {
+    background-color:#004;
+    line-height: 15px;
+    font-size: 0px;
+    transition: 0.5s;
+
+}
+.contenu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #004;
+    background-color:rgb(227, 227, 227) ;
+    color: #004;
+    font-size: x-large;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.contenu button{
+    padding: 5px 10px;
+    font-size: medium;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #004;
+    color: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    margin-right: 5px;
+}
+.contenu button:hover{
+    background-color: #050549e2;
+}
+.nom{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.view-date{
+    display: flex;
+    gap: 10px;
+    font-size: small;
+    color: #002;
+}

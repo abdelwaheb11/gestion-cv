@@ -1,0 +1,48 @@
+<div *ngFor="let l of exps">
+    <div class="contenu">
+        <div class="nom">
+            {{l.post}}
+            <div class="view-date">
+                {{l.date_d}}
+                {{l.date_f}}
+            </div>
+        </div>
+        <div>
+            <button class="edit" (click)="edit_exp(l.id)">Edit</button>
+            <button class="edit" (click)="supp_exp(l.id)">Suppremer</button>
+        </div>
+    </div>
+</div>
+
+<form name="f4">
+    <label for="post">Post </label>
+    <input type="text" name="post" id="post" [(ngModel)]="exp.post"><br>
+    <label for="etab">Établissement</label>
+    <input type="text" name="etab" id="etab" [(ngModel)]="exp.eta"><br>
+
+    <div class="date">
+        <label for="date_d">Date debut </label>
+        <select id="date_d"  [(ngModel)]="date_d_e_a" name="date_d_e_a">
+            <option value="0">Annee</option>
+            <option *ngFor="let m of annee" [value]="m">{{ m }}</option>
+        </select>
+        <select [(ngModel)]="date_d_e_m" name="date_d_e_m">
+            <option value="0">Mois</option>
+            <option *ngFor="let m of mois" [value]="m">{{ m }}</option>
+        </select><br>
+    </div>
+    <div class="date">
+        <label for="date_f">Date fin</label>
+        <select id="date_f" style="margin-left: 45px;"[(ngModel)]="date_f_e_a" name="date_f_e_a" >
+            <option value="0">Annee</option>
+            <option *ngFor="let m of annee" [value]="m">{{ m }}</option>
+        </select>
+        <select [(ngModel)]="date_f_e_m" name="date_f_e_m">
+            <option value="0">Mois</option>
+            <option *ngFor="let m of mois" [value]="m">{{ m }}</option>
+        </select><br>
+    </div>  
+    <label for="desc">Description </label>
+    <textarea name="desc" id="desc" cols="30" rows="10" [(ngModel)]="exp.desc"></textarea><br>
+    <input type="button" value="Ajouter" (click)="ajoute_exp()">          
+</form>

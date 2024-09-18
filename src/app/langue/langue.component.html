@@ -1,0 +1,21 @@
+<div *ngFor="let l of langs">
+    <div class="contenu">
+        <div class="nom">
+            {{l.labelle}}
+            <div class="probar">
+                <div class="nvbar" [style.width.%]="(l.niveau) * 10">.</div>
+            </div>
+        </div>
+        <div>
+            <button class="edit" (click)="edit_lang(l.id)">Edit</button>
+            <button class="edit" (click)="supp_lang(l.id)">Suppremer</button>
+        </div>
+    </div>
+</div>
+<form name="f3">
+    <label for="lan">Langues</label>
+    <input type="text" name="lan" id="lan" [(ngModel)]="lang.labelle"><br>
+    <label for="nv">Niveau sur 10</label>
+    <input type="number" name="nv" id="nv" [(ngModel)]="lang.niveau"><br>
+    <input type="button" value="Ajouter" (click)="ajouter_lange()">
+</form>

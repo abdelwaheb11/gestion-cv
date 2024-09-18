@@ -1,0 +1,78 @@
+<div class="update-cv">
+<div class="info-persolles">
+    <div class="titre">
+        <p>Information personnelles</p>
+        <span (click)="toggleVisibility('voirinfo')">{{ visibility['voirinfo'] ? 'Voir moins' : 'Voir plus' }}</span>
+    </div>
+    <div [ngStyle]="visibility['voirinfo'] ? style_vesible : style_hidden">
+        <form name="f1">
+            <label for="nom">Nom</label>
+            <input type="text" name="nom" id="nom" [(ngModel)]="info.nom"><br>
+            <label for="pre">Prenom</label>
+            <input type="text" name="prenom" id="pre" [(ngModel)]="info.pre"><br>
+            <label for="titre">Titre du profile </label>
+            <select id="titre" name="spe" [(ngModel)]="idspe" style="margin: 0; width: 100%; height: 40px; background: rgb(228, 228, 228);">
+                <option *ngFor="let s of spes" [value]="s.id">{{s.titre}}</option>
+            </select><br>
+            <label for="mail">Mail</label>
+            <input type="text" name="mail" id="mail" [(ngModel)]="info.mail"><br>
+            <label for="adr">Address</label>
+            <input type="text" name="adr" id="adr" [(ngModel)]="info.adr"><br>
+            <label for="tele">Numero de telephone</label>
+            <input type="text" name="tele" id="tele" [(ngModel)]="info.tele"><br>
+        </form>
+    </div>
+</div>
+<div class="profil">
+    <div class="titre">
+        <p>Profil</p>
+        <span (click)="toggleVisibility('voirdesc')">{{ visibility['voirdesc'] ? 'Voir moins' : 'Voir plus' }}</span>
+    </div>
+    <div [ngStyle]="visibility['voirdesc'] ? style_vesible : style_hidden">
+        <form name="f1">
+            <label for="desc">Description</label>
+            <textarea name="desc" id="desc" cols="30" rows="10" [(ngModel)]="info.desc"></textarea><br>
+        </form>
+    </div>
+</div>
+<div class="Langues">
+    <div class="titre">
+        <p>Langues</p>
+        <span (click)="toggleVisibility('voirlangues')">{{ visibility['voirlangues'] ? 'Voir moins' : 'Voir plus' }}</span>
+
+    </div>
+    <div [ngStyle]="visibility['voirlangues'] ? style_vesible : style_hidden">
+       <app-langue></app-langue>
+    </div>
+</div>
+<div class="formation">
+    <div class="titre">
+        <p>Formation</p>
+        <span (click)="toggleVisibility('voirformation')">{{ visibility['voirformation'] ? 'Voir moins' : 'Voir plus' }}</span>
+
+    </div>
+    <div [ngStyle]="visibility['voirformation'] ? style_vesible : style_hidden">
+       <app-formation></app-formation>
+    </div>
+</div>
+<div class="experience">
+    <div class="titre">
+        <p>Experience professionnelle</p>
+        <span (click)="toggleVisibility('voirexperience')">{{ visibility['voirexperience'] ? 'Voir moins' : 'Voir plus' }}</span>
+
+    </div>
+    <div [ngStyle]="visibility['voirexperience'] ? style_vesible : style_hidden">
+        <app-experience></app-experience>
+    </div>
+</div>
+<div class="competance">
+    <div class="titre">
+        <p>Competances</p>
+        <span (click)="toggleVisibility('voircompetences')">{{ visibility['voircompetences'] ? 'Voir moins' : 'Voir plus' }}</span>
+    </div>
+    <div [ngStyle]="visibility['voircompetences'] ? style_vesible : style_hidden">
+        <app-competance></app-competance>
+    </div>
+</div>
+<input type="button" value="Enregistre" (click)="ajouter()" class="btn-ajouter">
+</div>

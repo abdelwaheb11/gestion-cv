@@ -1,0 +1,21 @@
+.body{
+    width: 70%;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+}
+p,i{
+    color: red;
+}
+
+p{
+    font-size: 40px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+i{
+    margin-top: 50px;
+    font-size: 400px;
+
+}

@@ -1,0 +1,17 @@
+.contenaire{
+    width: 100%;
+}
+form{
+    padding: 0;
+}
+.side-bar{
+    width: 25%;
+    height: 92vh;
+    padding-left: 20px;
+    
+    background:linear-gradient(rgb(150, 191, 203),rgb(186, 203, 212));
+    border-right: 1px solid #002;
+}
+.lange,.spe,.compe,.anne-exp{
+    margin-bottom: 40px;
+}

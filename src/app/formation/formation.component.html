@@ -1,0 +1,45 @@
+<div *ngFor="let l of forms">
+    <div class="contenu">
+        <div class="nom">
+            {{l.titre}}
+            <div class="view-date">
+                {{l.date_d}}
+                {{l.date_f}}
+            </div>
+        </div>
+        <div>
+            <button class="edit" (click)="edit_form(l.id)">Edit</button>
+            <button class="edit" (click)="supp_form(l.id)">Suppremer</button>
+        </div>
+    </div>
+</div>
+<form name="f4">
+    <label for="titre">Titre de formation </label>
+    <input type="text" name="titre" id="titre" [(ngModel)]="form.titre"><br>
+    <label for="etab">Établissement</label>
+    <input type="text" name="etab" id="etab" [(ngModel)]="form.eta"><br>
+
+    <div class="date">
+        <label for="date_d">Date debut </label>
+        <select id="date_d" [(ngModel)]="date_d_f_a" name="date_d_f_a">
+            <option value="0">Annee</option>
+            <option *ngFor="let m of annee" [value]="m">{{ m }}</option>
+        </select>
+        <select  [(ngModel)]="date_d_f_m" name="date_d_f_m">
+            <option value="0">Mois</option>
+            <option *ngFor="let m of mois" [value]="m">{{ m }}</option>
+        </select><br>
+    </div>
+    <div class="date">
+        <label for="date_f">Date fin</label>
+        <select id="date_f" style="margin-left: 45px;"  name="date_f_f_a" [(ngModel)]="date_f_f_a">
+            <option value="0">Annee</option>
+            <option *ngFor="let m of annee" [value]="m">{{ m }}</option>
+        </select>
+        <select  [(ngModel)]="date_f_f_m" name="date_f_f_m">
+            <option value="0">Mois</option>
+            <option *ngFor="let m of mois" [value]="m">{{ m }}</option>
+        </select><br>
+    </div>  
+    <input type="button" value="Ajouter" (click)="ajoute_form()">          
+</form>
